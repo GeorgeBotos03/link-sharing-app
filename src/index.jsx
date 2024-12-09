@@ -1,10 +1,12 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import { Heading } from "./common";
+import PropTypes from "prop-types";
+import Container from "./index.styled";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <Heading>Hello world</Heading>
-  </StrictMode>
-);
+const TemplateComponent = (props) => {
+  return <Container>Our nice template component {props.children}</Container>;
+};
+
+TemplateComponent.propTypes = {
+  children: PropTypes.element,
+};
+
+export default TemplateComponent;
