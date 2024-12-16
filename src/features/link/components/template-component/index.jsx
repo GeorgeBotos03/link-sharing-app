@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import Container from "./index.styled";
 
-const TemplatePage = (props) => {
+const TemplateComponent = (props) => {
   return <Container>Our nice template component {props.children}</Container>;
 };
 
-TemplatePage.propTypes = {
+TemplateComponent.propTypes = {
   children: PropTypes.element,
 };
 
-export default TemplatePage;
+export default TemplateComponent;
